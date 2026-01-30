@@ -1,17 +1,11 @@
-# Problem 93: Find longest common prefix
+# Problem 94: Count bits set to 1
 # Find and fix the error
 
-def longest_common_prefix(strs):
-    if not strs:
-        return ""
-    
-    prefix = strs[0]
-    for s in strs[1:]:
-        while not s.startswith(prefix):
-            prefix = prefix[:-1]
-            if not prefix:
-                return ""
-    return prefix
+def count_set_bits(n):
+    count = 0
+    while n:
+        count += n & 1
+        n = n >> 1
+    return count
 
-words = ["flower", "flow", "flight"]
-print(f"Longest common prefix: {longest_common_prefix(words)}")
+print(f"Set bits in 15: {count_set_bits(15)}")
