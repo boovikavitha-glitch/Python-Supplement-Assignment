@@ -1,11 +1,9 @@
-# Problem 25: Find GCD of two numbers
+# Problem 24: Remove all spaces from a string
 # Find and fix the error
 
-def gcd(a, b):
-    while b != 0:
-        temp = b
-        b = a % b
-        a = temp
-    return a
-
-print(f"GCD of 48 and 18: {gcd(48, 18)}")
+text = "Hello World From Python"
+no_spaces = ""
+for char in text:
+    if char != " ":
+        no_spaces += char
+print(f"Without spaces: {no_spaces}")
